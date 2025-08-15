@@ -54,7 +54,7 @@ VITE_API_URL=http://localhost:8000/api
 
 3. Подключить seed-данные для разработки
 
-4. Привести frontend-fsd к сборке (smoke) и проверить login/CRUD
+4. Привести frontend-fsd к сборке и проверить login/CRUD
 
 5. Настроить базовый CI (lint → typecheck → tests → build)
 

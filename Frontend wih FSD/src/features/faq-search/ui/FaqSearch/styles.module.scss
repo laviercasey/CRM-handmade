@@ -1,0 +1,28 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.loading {
+  color: #666;
+  
+  i {
+    margin-right: 8px;
+    color: vars.$primary-color;
+  }
+}
+
+.error {
+  color: #e74c3c;
+  background-color: #fdf2f2;
+  border: 1px solid #f5c6cb;
+  border-radius: vars.$border-radius;
+  
+  i {
+    margin-right: 8px;
+  }
+}

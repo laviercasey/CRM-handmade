@@ -1,0 +1,64 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.wrapper {
+  margin-bottom: 30px;
+}
+
+.inputWrapper {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 14px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 40px;
+  border: 1px solid vars.$border-color;
+  border-radius: 30px;
+  font-size: vars.$font-size-base;
+  transition: vars.$transition-base;
+  background-color: vars.$white;
+  
+  &:focus {
+    border-color: vars.$primary-color;
+    outline: none;
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: vars.$bg-light;
+  }
+}
+
+.clearButton {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    color: vars.$text-color;
+  }
+}

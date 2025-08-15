@@ -1,0 +1,14 @@
+@use '@/shared/styles/variables' as vars;
+@use '@/shared/styles/mixins' as mixins;
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex: 2;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

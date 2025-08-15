@@ -1,0 +1,46 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  z-index: 1000;
+  min-width: 200px;
+  background-color: vars.$white;
+  border-radius: vars.$border-radius * 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bottomRight {
+  right: 0;
+  top: 100%;
+  margin-top: 4px;
+}
+
+.bottomLeft {
+  left: 0;
+  top: 100%;
+  margin-top: 4px;
+}
+
+.topRight {
+  right: 0;
+  bottom: 100%;
+  margin-bottom: 4px;
+}
+
+.topLeft {
+  left: 0;
+  bottom: 100%;
+  margin-bottom: 4px;
+}

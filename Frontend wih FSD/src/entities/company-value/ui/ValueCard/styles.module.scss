@@ -1,0 +1,32 @@
+@use '@/shared/styles/variables' as vars;
+@use '@/shared/styles/mixins' as mixins;
+
+.value {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.icon {
+  font-size: 2rem;
+  color: #6c5ce7;
+  margin-bottom: 15px;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}

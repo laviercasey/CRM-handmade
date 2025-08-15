@@ -1,0 +1,165 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.appHeader {
+  background-color: vars.$white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  @include mixins.container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerLogo {
+  a {
+    font-size: 24px;
+    font-weight: bold;
+    color: vars.$primary-color;
+  }
+}
+
+.headerNav {
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  color: vars.$text-color;
+  transition: vars.$transition-base;
+
+  &:hover, &.router-link-active {
+    color: vars.$primary-color;
+  }
+}
+
+.headerAuth {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.btnLogin, .btnRegister {
+  padding: 8px 16px;
+  border-radius: vars.$border-radius;
+  font-size: 14px;
+  cursor: pointer;
+  transition: vars.$transition-base;
+}
+
+.btnLogin {
+  background-color: transparent;
+  border: 1px solid vars.$primary-color;
+  color: vars.$primary-color;
+
+  &:hover {
+    background-color: #f5f3ff;
+  }
+}
+
+.btnRegister {
+  background-color: vars.$primary-color;
+  border: none;
+  color: vars.$white;
+
+  &:hover {
+    background-color: vars.$primary-hover;
+  }
+}
+
+.userDropdown {
+  position: relative;
+  
+  &:hover .dropdownMenu {
+    display: block;
+  }
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: vars.$border-radius;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.userAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: vars.$primary-color;
+  color: vars.$white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dropdownMenu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 200px;
+  background-color: vars.$white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  z-index: 100;
+  display: none;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  color: vars.$text-color;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    background-color: vars.$secondary-bg;
+  }
+
+  i {
+    width: 16px;
+  }
+}
+
+.mobileMenuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: vars.$text-color;
+}
+
+@media (max-width: 1024px) {
+  .desktopNav, .desktopAuth {
+    display: none;
+  }
+  
+  .mobileMenuToggle {
+    display: block;
+  }
+}

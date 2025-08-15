@@ -1,0 +1,8 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}

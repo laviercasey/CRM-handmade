@@ -1,0 +1,20 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: vars.$transition-base;
+  text-decoration: none;
+  
+  &:hover {
+    background-color: vars.$primary-color;
+    color: vars.$white;
+  }
+}

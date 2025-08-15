@@ -1,0 +1,48 @@
+@use '@/shared/styles/variables' as vars;
+@use '@/shared/styles/mixins' as mixins;
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.desktopNav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.desktopAuth {
+  flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.mobileToggle {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}

@@ -1,0 +1,55 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+@use '../../model/config';
+
+.section {
+  padding: 60px 0;
+  background-color: #f9f7f4;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2rem;
+  color: vars.$text-color;
+  margin-bottom: 12px;
+  position: relative;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: vars.$primary-color;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: vars.$text-color;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: vars.$mobile-breakpoint) {
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+}

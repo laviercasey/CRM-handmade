@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(mkdir:*)",
+      "Bash(dir)",
+      "Bash(cat:*)",
+      "Bash(cp:*)",
+      "Bash(copy:*)",
+      "Bash(copy \"views\\DashboardView.vue\" \"pages\\dashboard\\index.vue\")",
+      "Bash(copy \"views\\RequestFormView.vue\" \"pages\\request-form\\index.vue\")",
+      "Bash(xcopy:*)",
+      "Bash(for file in \"C:\\Users\\ksuta\\Documents\\CRMFrontendv2\\src\\store\\modules\\*.js\")",
+      "Bash(do cp \"$file\" \"C:\\Users\\ksuta\\Documents\\CRMFrontendv2\\src\\shared\\store\\modules\"\")",
+      "Bash(done)",
+      "Bash(robocopy:*)",
+      "Bash(for file in *.js)",
+      "Bash(do [ \"$file\" != \"api.js\" ])",
+      "Bash([ \"$file\" != \"auth.service.js\" ])",
+      "Bash(echo:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)"
+    ],
+    "deny": []
+  }
+}

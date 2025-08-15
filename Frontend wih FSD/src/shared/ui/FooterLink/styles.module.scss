@@ -1,0 +1,44 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.link {
+  color: #666;
+  text-decoration: none;
+  transition: vars.$transition-base;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  
+  &:hover {
+    color: vars.$primary-color;
+  }
+}
+
+.default {
+  font-size: 14px;
+}
+
+.contact {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.social {
+  font-size: 16px;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+}
+
+.contact .icon {
+  width: 20px;
+  color: vars.$primary-color;
+}

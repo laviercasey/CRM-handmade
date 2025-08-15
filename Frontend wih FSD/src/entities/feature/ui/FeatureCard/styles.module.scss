@@ -1,0 +1,33 @@
+@use '@/shared/styles/variables' as vars;
+@use '@/shared/styles/mixins' as mixins;
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #6c5ce7;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}

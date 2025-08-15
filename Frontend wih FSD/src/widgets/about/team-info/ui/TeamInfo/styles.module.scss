@@ -1,0 +1,22 @@
+@use '@/shared/styles/variables' as vars;
+@use '@/shared/styles/mixins' as mixins;
+
+.teamInfo {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,105 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.modal {
+  background-color: vars.$white;
+  border-radius: vars.$border-radius * 2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.small {
+  width: 90%;
+  max-width: 400px;
+}
+
+.medium {
+  width: 90%;
+  max-width: 500px;
+}
+
+.large {
+  width: 90%;
+  max-width: 800px;
+}
+
+.fullscreen {
+  width: 95vw;
+  height: 95vh;
+  max-width: none;
+  max-height: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid vars.$border-color;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: vars.$text-color;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: vars.$transition-base;
+  
+  &:hover {
+    background-color: vars.$secondary-hover;
+    color: vars.$text-color;
+  }
+}
+
+.body {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.footer {
+  padding: 20px;
+  border-top: 1px solid vars.$border-color;
+  flex-shrink: 0;
+}
+
+@media (max-width: vars.$mobile-breakpoint) {
+  .small,
+  .medium,
+  .large {
+    width: 95%;
+    max-width: none;
+  }
+  
+  .header,
+  .body,
+  .footer {
+    padding: 16px;
+  }
+}

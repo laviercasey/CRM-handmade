@@ -1,0 +1,46 @@
+@use '@/shared/styles/variables' as vars;
+@use '@/shared/styles/mixins' as mixins;
+
+.nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+
+  &:hover {
+    color: #6c5ce7;
+  }
+
+  &.router-link-active {
+    color: #6c5ce7;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #6c5ce7;
+    }
+  }
+
+  i {
+    font-size: 14px;
+  }
+}

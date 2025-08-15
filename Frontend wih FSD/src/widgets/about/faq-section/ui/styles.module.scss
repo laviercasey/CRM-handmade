@@ -1,0 +1,61 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.section {
+  padding: 60px 0;
+  background-color: vars.$white;
+}
+
+.title {
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  font-size: 2rem;
+  color: vars.$text-color;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: vars.$primary-color;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 40px 20px;
+  margin: 20px 0;
+}
+
+.loading {
+  color: #666;
+  
+  i {
+    margin-right: 8px;
+    color: vars.$primary-color;
+    font-size: 1.2rem;
+  }
+}
+
+.error {
+  color: #e74c3c;
+  background-color: #fdf2f2;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  
+  i {
+    margin-right: 8px;
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+}
+
+.retryButton {
+  margin-top: 15px;
+}

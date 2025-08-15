@@ -1,0 +1,38 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.group {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: vars.$text-color;
+  font-size: 14px;
+  
+  &.required::after {
+    content: ' *';
+    color: #e74c3c;
+  }
+}
+
+.error {
+  margin-top: 6px;
+  color: #e74c3c;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  
+  i {
+    font-size: 12px;
+  }
+}
+
+.hint {
+  margin-top: 6px;
+  color: #666;
+  font-size: 14px;
+}

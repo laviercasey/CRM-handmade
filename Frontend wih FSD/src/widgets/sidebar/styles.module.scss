@@ -1,0 +1,39 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.sidebar {
+  width: 250px;
+  background-color: vars.$white;
+  border-right: 1px solid vars.$border-color;
+  height: 100%;
+}
+
+.sidebarNav {
+  padding: 20px 0;
+}
+
+.sidebarItem {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: vars.$transition-base;
+  
+  &:hover {
+    background-color: vars.$secondary-bg;
+  }
+  
+  &.active {
+    background-color: vars.$primary-color;
+    color: vars.$white;
+  }
+  
+  i {
+    width: 16px;
+  }
+}

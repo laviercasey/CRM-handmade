@@ -1,0 +1,49 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.button {
+  border-radius: vars.$border-radius;
+  font-weight: 500;
+  cursor: pointer;
+  transition: vars.$transition-base;
+  border: none;
+  font-family: inherit;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.primary {
+  background-color: vars.$white;
+  color: vars.$primary-color;
+  
+  &:hover {
+    background-color: vars.$bg-light;
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  color: vars.$white;
+  border: 2px solid vars.$white;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.small {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+
+.medium {
+  padding: 12px 30px;
+  font-size: 1rem;
+}
+
+.large {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+}

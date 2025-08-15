@@ -1,0 +1,7 @@
+@use '@/shared/styles/variables' as vars;
+@use '@/shared/styles/mixins' as mixins;
+
+.steps {
+  max-width: 800px;
+  margin: 0 auto;
+}

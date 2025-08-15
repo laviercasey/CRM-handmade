@@ -1,0 +1,51 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.hero {
+  padding: 80px 0;
+  background-color: #f9f7f4;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: vars.$primary-color;
+}
+
+.slogan {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: vars.$text-color;
+}
+
+.goal {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.image {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (max-width: vars.$mobile-breakpoint) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .slogan {
+    font-size: 1.2rem;
+  }
+}

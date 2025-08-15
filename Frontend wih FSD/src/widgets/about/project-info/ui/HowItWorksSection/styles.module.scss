@@ -1,0 +1,27 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.section {
+  padding: 80px 0;
+  background-color: vars.$bg-light;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  font-size: 2rem;
+  color: vars.$text-color;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: vars.$primary-color;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

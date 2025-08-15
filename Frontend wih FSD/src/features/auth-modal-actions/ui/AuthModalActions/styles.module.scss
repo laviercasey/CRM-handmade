@@ -1,0 +1,39 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.textButton {
+  background: none;
+  border: none;
+  color: vars.$primary-color;
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 14px;
+  text-decoration: none;
+  transition: vars.$transition-base;
+  
+  &:hover {
+    text-decoration: underline;
+    color: vars.$primary-hover;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .textButton {
+    text-align: center;
+  }
+}

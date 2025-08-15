@@ -1,0 +1,74 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: vars.$border-radius;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.chevron {
+  font-size: 12px;
+  color: #666;
+  transition: transform 0.2s;
+  
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
+.menu {
+  min-width: 200px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: vars.$text-color;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  
+  &:hover {
+    background-color: vars.$secondary-bg;
+  }
+  
+  i {
+    width: 16px;
+    text-align: center;
+    color: #666;
+  }
+}
+
+.logoutItem {
+  color: #e74c3c;
+  
+  &:hover {
+    background-color: #fdf2f2;
+  }
+  
+  i {
+    color: #e74c3c;
+  }
+}
+
+.divider {
+  height: 1px;
+  background-color: vars.$border-color;
+  margin: 4px 0;
+}

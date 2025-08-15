@@ -1,0 +1,42 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.avatar {
+  border-radius: 50%;
+  background-color: vars.$primary-color;
+  color: vars.$white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.small {
+  width: 24px;
+  height: 24px;
+  font-size: 10px;
+}
+
+.medium {
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+}
+
+.large {
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.initials {
+  text-transform: uppercase;
+}

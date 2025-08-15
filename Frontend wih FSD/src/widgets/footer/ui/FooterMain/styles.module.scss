@@ -1,0 +1,27 @@
+@use '@/shared/styles/variables.scss' as vars;
+@use '@/shared/styles/mixins.scss' as mixins;
+
+.footerMain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+  
+  @media (max-width: vars.$mobile-breakpoint) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.logoSection {
+  flex: 1;
+  min-width: 200px;
+}
+
+.tagline {
+  margin-top: 10px;
+  color: vars.$text-color;
+  font-size: 14px;
+  line-height: 1.5;
+}

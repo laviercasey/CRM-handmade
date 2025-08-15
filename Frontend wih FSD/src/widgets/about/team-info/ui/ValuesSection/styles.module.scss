@@ -1,0 +1,9 @@
+@use '@/shared/styles/variables' as vars;
+@use '@/shared/styles/mixins' as mixins;
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
